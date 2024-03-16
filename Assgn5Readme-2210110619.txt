@@ -1,0 +1,45 @@
+# README: Implementing TAS, CAS and Bounded Waiting CAS Mutual Exclusion Algorithms
+
+## Instructions to execute program
+
+1. Create Input file "inp-params.txt" with parameters n, k, l1, l2.
+sample 'inp-params.txt' file: 5 10 100 100
+
+2. Compile and execute using the commands:
+$ g++ -std=c++11 -pthread Assgn5Src-2210110619.cpp -o test1
+$ ./test1
+
+## Output Files
+
+output files consists of the following:
+"out-tas.txt"
+"out-cas.txt"
+"out-bounded.txt"
+
+at the end of each file consists Average time to enter cs by each thread and Maximum Time ei. worst case time take by each process.
+
+For eg.
+"""
+9th CS Requested by thread 1
+9th CS Exited by thread 3
+9th CS Entered by thread 4
+Average time to enter CS for thread 3 is 302.2 ms
+Maximum time to enter CS for thread 3 is 509 ms
+9th CS Exited by thread 4
+9th CS Entered by thread 1
+Average time to enter CS for thread 4 is 312.2 ms
+Maximum time to enter CS for thread 4 is 415 ms
+9th CS Exited by thread 1
+Average time to enter CS for thread 1 is 322.6 ms
+Maximum time to enter CS for thread 1 is 612 ms
+"""
+
+Note: no timestamps has been printed with each epoch for maintaining the clarity since we've already calculated Avg Max Time.
+
+!! Also Note: <mutex> is only used to cout print statments, ensuring these threads do not print overlaps. It's not used in TAS and CAS Algorithms!!
+
+"""
+mtx.lock();
+cout << i << "th CS Requested by thread " << id << endl;
+mtx.unlock();
+"""
