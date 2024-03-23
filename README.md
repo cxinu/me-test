@@ -85,10 +85,4 @@ From the collected data, we can make several observations:
 Note that each point of the graph is **obtained by averaging over five runs.**
 ## Conclusion
 
-The data suggests that TAS and CAS have similar performance characteristics, with TAS generally showing slightly better times. However, both are significantly outperformed by the Bounded CAS ME algorithm, which shows much higher average and worst-case times. This could be due to the additional overhead of the bounding operation in the Bounded CAS ME algorithm.
-
-It’s important to note that these results are specific to the conditions under which the tests were run. Different conditions, such as varying the number of threads or the load on the system, could yield different results. Therefore, while this analysis provides useful insights, it is not definitive. Further testing under a variety of conditions would be beneficial to fully understand the performance characteristics of these algorithms.
-
-*Please refer to the attached graph for a visual representation of these results. The graph clearly illustrates the performance differences between the three algorithms, providing a clear and concise summary of the data.*
-
-This report provides a comprehensive analysis of the performance of TAS, CAS, and Bounded CAS ME algorithms. However, it’s important to remember that performance is just one aspect to consider when choosing a synchronization algorithm. Other factors, such as the specific requirements of the system, the complexity of the algorithm, and the potential for starvation, should also be taken into account.
+The conclusion states that TAS and CAS have similar performance, but are outperformed by the Bounded CAS ME algorithm. However, the results are specific to the test conditions, and further testing is needed to fully understand the algorithms' performance. Other factors should also be considered when choosing a synchronization algorithm.
